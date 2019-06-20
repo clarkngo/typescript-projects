@@ -1,4 +1,5 @@
 # Creating your modified compiler
+Reference: https://code.visualstudio.com/docs/typescript/typescript-tutorial
 
 1. Create a `tsconfig.json`
 
