@@ -21,4 +21,4 @@ console.log(message);
 
 3. In your terminal, type `tsc`
 
-It would generate a folder named `out` and js file named `helloworld.js`.
+It would generate a folder named `out` and js file named `helloworld.js` inside it.
