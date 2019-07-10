@@ -1,0 +1,10 @@
+var num1 = 0;
+var num2 = 2;
+var sum;
+num1++;
+num2--;
+sum = -num1 + -num2;
+console.log(sum == 2);
+console.log(sum < 0 && sum > -10);
+console.log(sum > 0 || sum > -10);
+console.log(sum == -2);
