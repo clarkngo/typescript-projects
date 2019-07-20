@@ -1,6 +1,7 @@
-let j:any;
-const n:any = "CITYU";
+class Greeting {
+   greet (): void {
+      return console . log("Hello!!!");
+   }
 
-for(j in n) {
-   console.log(n[j])
+
 }
