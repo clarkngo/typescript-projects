@@ -9,6 +9,9 @@ class Person {
 }
 
 const kevin = new Person('Kevin');
+
+// Property 'name' is protected and
+// only accessible within class 'Person' and its subclasses.
 kevin.name = 'Arthur';
 
 class Kevin extends Person {

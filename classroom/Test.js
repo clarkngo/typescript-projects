@@ -1,8 +1,3 @@
-var Greeting = /** @class */ (function () {
-    function Greeting() {
-    }
-    Greeting.prototype.greet = function () {
-        return console.log("Hello!!!");
-    };
-    return Greeting;
-}());
+var numbers = [1, 9, 7, 3]; //INPUT
+var sqrs = numbers.map(function (x) { return Math.pow(x, 2); }).sort(function (a, b) { return a - b; });
+console.log("square of numbers are : " + sqrs);
