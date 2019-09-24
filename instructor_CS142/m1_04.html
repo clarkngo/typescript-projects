@@ -1,12 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello</title>
-    <script src="m1_04.js">
-    </script>
-  </head>
-  <body>
-    <h1>Hello class!  </h1>
-  </body>
-</html>
-t
+<main>
+  <div>
+    <label>Filter Rows</label>
+    <input id='filter' />
+  </div>
+
+  <div>
+    <h1 onclick='sortNames()'>Names</h1>
+    <ul id='names'></ul>
+  </div>
+</main>
+
+<script>
+  let rows = [];
+  let inputFilter = document.getElementById('filter');
+  let ulNames = document.getElementById('names');
+
+  function load() {
+    google.script.run
+    .withSuccessHandler(function(response) {
+      rows = response.map(function(element) {
+        return element[1] + ' ' + element[0];
+      });
+
+      ulNames.innerHTML = rows.map(function(row) {
+        return '<li>' + row + '</li>';
+      }).join('');
+
+      inputFilter.addEventListener('input', function(evt) {
+        let filter = evt.target.value.toLowerCase();
+        let filteredArray = rows.filter(function(row) {
+          return row.toLowerCase().includes(filter);
+        })
+        ulNames.innerHTML = filteredArray.map(function(row) {
+          return '<li>' + row + '</li>';
+        }).join('');
+      });
+    })
+    .getData();
+  }
+
+</script>

@@ -2,41 +2,12 @@
 <html>
   <body>
 
-  <p>Click the button to get every element in the array has a value above a specific number.</p>
   <p id="array" onload="javascript:showArray(ages)"></p>
   <p>Minimum age: <input type="number" id="ageToCheck" value="18"></p>
   <button onclick="myFunction()">Try it</button>
 
   <p>All ages above minimum: <span id="demo"></span></p>
-
-  <p>Click the button to multiple every element in the array by 2.</p>
-  <button onclick="myFunction2()">Try it</button>
-
-  <p>All ages multiply by 2: <span id="demo2"></span></p>
-  <script>
-    let ages = [32, 33, 12, 40];
-
-    document.write("Original array: <br/>");
-    document.write("<ul>");
-    for (i = 0; i < ages.length; i++) {
-      document.write(
-        "<li>ages " + i + " = " +
-        ages[i] + "</li>");
-    }
-    document.write("</ul>");
-
-    function checkAdult(age) {
-      return age >= document.getElementById("ageToCheck").value;
-    }
-
-    function myFunction() {
-      document.getElementById("demo").innerHTML = ages.filter(checkAdult);
-    }
-
-
-    function myFunction2() {
-      document.getElementById("demo2").innerHTML = ages.map(num => num * 2);
-    }
+  <script src="demo.js">
   </script>
 
   </body>
